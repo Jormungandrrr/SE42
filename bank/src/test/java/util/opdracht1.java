@@ -4,8 +4,6 @@ import bank.dao.AccountDAOJPAImpl;
 import bank.domain.Account;
 import java.sql.SQLException;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -21,21 +19,8 @@ import static org.junit.Assert.*;
  * @author Jorrit
  */
 public class opdracht1 {
-
     EntityManagerFactory emf = Persistence.createEntityManagerFactory("bankPU");
     EntityManager em;
-
-    public opdracht1() {
-    }
-
-    @BeforeClass
-    public static void setUpClass() {
-
-    }
-
-    @AfterClass
-    public static void tearDownClass() {
-    }
 
     @Before
     public void setUp() {
@@ -43,32 +28,23 @@ public class opdracht1 {
     }
 
     @After
-    public void tearDown() {
-        try {
-            DatabaseCleaner.clean(em);
-        } catch (SQLException ex) {
-            Logger.getLogger(opdracht1.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    public void tearDown() throws SQLException {
+        DatabaseCleaner.clean(em);
     }
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
     @Test
     public void persistCommitTest() {
         Account account = new Account(112L);
         em.getTransaction().begin();
         em.persist(account);
         /**
-         * Bij persist() maakt hij allen de instantie en wordt er nog niet
-         * gecommit. Het komt hier dus nog niet in de database.
+         * persist() maakt de instantie aan.
          */
         assertNull(account.getId());
         em.getTransaction().commit();
         System.out.println("AccountId: " + account.getId());
         /**
-         * Bij commit() probeert hij het naar de database te schrijven. Hier
-         * komen dus ook alle database errors naar boven (zoals Duplicate Key).
+         * commit() probeert het naar de database te schrijven.
          */
         assertTrue(account.getId() > 0L);
     }
@@ -84,8 +60,7 @@ public class opdracht1 {
         List<Account> findAll = accountDAOJPAImpl.findAll();
         assertEquals(findAll.size(), 0);
         /**
-         * Met de functie findAll() laad hij alles wat hij kan vinden. Als daar
-         * dus geen records gevonden worden (size=0) is de database dus leeg.
+         * findAll() laad hij alles wat hij kan vinden.
          */
     }
 
@@ -103,13 +78,13 @@ public class opdracht1 {
         assertEquals(expected, account.getId());
         em.flush();
         /**
-         * Flush controlleerd in de database, maar zet het er nog niet
+         * Flush controleerd in de database, maar zet het er nog niet
          * daadwerkelijk in.
          */
         assertNotEquals(expected, account.getId());
         em.getTransaction().commit();
-        /**
-         * Geen idee wat ik hier moet verklaren / aanpassen...
+         /**
+         * commit() probeert het naar de database te schrijven.
          */
     }
 
