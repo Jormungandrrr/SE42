@@ -4,13 +4,26 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <shared-cache-mode>NONE</shared-cache-mode>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/fontys"/>
-      <property name="javax.persistence.jdbc.password" value="fontys"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://studmysql01.fhict.local:3306/dbi346355?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.password" value="jorrit"/>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-      <property name="javax.persistence.jdbc.user" value="fontys"/>
+      <property name="javax.persistence.jdbc.user" value="dbi346355"/>
       <property name="eclipselink.ddl-generation" value="create-tables"/>
       <property name="eclipselink.logging.logger" value="DefaultLogger"/>
       <property name="eclipselink.logging.level" value="FINE"/>
+    </properties>
+  </persistence-unit>
+  <persistence-unit name="nl.fontys.se42_bank_jar_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://studmysql01.fhict.local:3306/dbi346355?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="dbi346355"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="jorrit"/>
+      <property name="javax.persistence.schema-generation.database.action" value="create"/>
+      <property name="eclipselink.logging.logger” value=”DefaultLogger"/>
+      <property name="eclipselink.logging.level” value=”FINE"/>
+
     </properties>
   </persistence-unit>
 </persistence>
