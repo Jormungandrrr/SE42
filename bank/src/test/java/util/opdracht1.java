@@ -96,25 +96,22 @@ public class opdracht1 {
         em.persist(account);
         account.setBalance(expectedBalance);
         em.getTransaction().commit();
-        assertEquals(expectedBalance, account.getBalance());
+        assertEquals(expectedBalance, account.getBalance());       
         /**
-         * account.getBalance() is gelijk aan expectedBalance wat inhoud dat
-         * ofwel commit() alleen de gegevens naar de database stuurt die gegeven
-         * waren in persist() en de gegevens niet ophaalt uit de database ofwel
-         * dat hij de aanpassingen na persist() gewoon doorvoerd naar de
-         * database.
+         * aanpassingen na persist() zijn doorgevoerd daarom zijn excpectedBalance en account.getBalance() gelijk
          */
+        
+        
         Long acId = account.getId();
         account = null;
         EntityManager em2 = emf.createEntityManager();
         em2.getTransaction().begin();
         Account found = em2.find(Account.class, acId);
-        assertEquals(expectedBalance, found.getBalance());
-        /**
-         * found.getBalance() is gelijk aan expectedBalance wat inhoud dat ook
-         * de aanpassingen die gedaan worden na persist() doorgevoerd worden
-         * naar de Database bij commit().
+        assertEquals(expectedBalance, found.getBalance());       
+         /**
+          * als commit correct is doorgevoerd is found.getbalance() gelijk aan expectedBalance
          */
+        
     }
 
     @Test
@@ -137,12 +134,10 @@ public class opdracht1 {
         em.getTransaction().begin();
         em.getTransaction().commit();
         em2.refresh(found);
-        assertEquals(changedBalance, found.getBalance());
+        assertEquals(changedBalance, found.getBalance());       
         /**
-         * In commit wordt het aangepaste account naar de database gegooit, en
-         * bij refresh wordt found weer geupdate om de database te matchen. Dit
-         * kan je zien omdat de aanpassing die bij account gedaan is terug te
-         * vinden is bij found.
+         * na een commit word de found gerefreshed en weer geupdate. 
+         * daarom is ChangedBalance gelijk aan found.getBalance()
          */
     }
 
@@ -151,21 +146,20 @@ public class opdracht1 {
         Account acc = new Account(1L);
         Account acc2;
 
-        // scenario 1
+        //1
         Long balance1 = 100L;
         em.getTransaction().begin();
         em.persist(acc);
         acc.setBalance(balance1);
         em.getTransaction().commit();
-        assertEquals(balance1, acc.getBalance());
+        assertEquals(balance1, acc.getBalance());      
         /**
-         * Er is hier nog maar een account waardoor er dus ook maar een assert
-         * nodig is.
+         * nog maar een account 
          */
 
-        // scenario 2
-        Long balance2a = 211L;
-        Long balance2b = 222L;
+        //2
+        Long balance2a = 225L;
+        Long balance2b = 235L;
         em.getTransaction().begin();
         acc2 = em.merge(acc);
         acc.setBalance(balance2a);
@@ -174,12 +168,11 @@ public class opdracht1 {
         assertEquals(balance2b, acc.getBalance());
         assertEquals(balance2b, acc2.getBalance());
         /**
-         * Hier wordt de balance van acc naar balance2a gezet waar de balance
-         * van acc2 naar balance2b gezet wordt. Maar omdat acc2 later geset is
-         * wordt de balance van acc weer overschreven.
+         * omdat acc2 gereset is word het balance van acc weer heschreven
          */
 
-        // scenario 3
+
+        //3
         Long balance3c = 333L;
         Long balance3d = 344L;
         em.getTransaction().begin();
@@ -193,10 +186,10 @@ public class opdracht1 {
         assertEquals(balance3d, acc.getBalance());
         assertEquals(balance3d, acc2.getBalance());
         /**
-         * Ik snap niet waarom dit scenario verschilt van scenario 2...
+         * word weinig anders getest dan bij 3
          */
 
-        // scenario 4
+        //4
         Account account = new Account(114L);
         account.setBalance(450L);
         EntityManager em = emf.createEntityManager();
@@ -209,24 +202,23 @@ public class opdracht1 {
         tweedeAccountObject.setBalance(650l);
         assertEquals((Long) 650L, account2.getBalance());
         /**
-         * deze zijn in java gelinked.
+         * linked in java
          */
         account2.setId(account.getId());
         em.getTransaction().begin();
         account2 = em.merge(account2);
         assertSame(account, account2);
         /**
-         * ze hebben de zelfde id en de gegevens worden dus correct gesynced bij
-         * merge().
+         * accounts zijn het zelfde dus correct gesynced bij een merge
          */
         assertTrue(em.contains(account2));
         /**
-         * account2 is gelijk aan account en die is al gecommit.
+         * account is al gecommit en gelijk aan account2
+         * 
          */
         assertFalse(em.contains(tweedeAccountObject));
         /**
-         * tweedeAccountObject is niet meer gelinked aan account2 omdat account2
-         * geset is naar de waarde van merge().
+         * tweedeAccountObject niet meer gelinked omdat account2 gereset is naar de merge waarde
          */
         tweedeAccountObject.setBalance(850l);
         assertEquals((Long) 650L, account.getBalance());
@@ -241,25 +233,21 @@ public class opdracht1 {
         em.getTransaction().begin();
         em.persist(acc1);
         em.getTransaction().commit();
-        //Database bevat nu een account.
 
-        // scenario 1        
+        //1        
         Account accF1;
         Account accF2;
         accF1 = em.find(Account.class, acc1.getId());
         accF2 = em.find(Account.class, acc1.getId());
         assertSame(accF1, accF2);
 
-        // scenario 2        
+        //2        
         accF1 = em.find(Account.class, acc1.getId());
         em.clear();
         accF2 = em.find(Account.class, acc1.getId());
         //assertSame(accF1, accF2);
         /**
-         * clear() koppelt alleen alle locale componenten los van em, en cleared
-         * alle persists enzo. Maar dat heeft geen verdere betrekking tot
-         * find(). Wel betekend dit dat aanpassingen aan accF1 niet meer
-         * gesynced worden.
+         * clear() heeft geen betrekking op find dit betekend dat accounts niet meer gesynced word
          */
     }
 
@@ -270,7 +258,6 @@ public class opdracht1 {
         em.persist(acc1);
         em.getTransaction().commit();
         Long id = acc1.getId();
-        //Database bevat nu een account.
 
         em.remove(acc1);
         assertEquals(id, acc1.getId());
