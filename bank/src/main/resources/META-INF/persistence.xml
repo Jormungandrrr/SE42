@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
-  <persistence-unit name="bankPU" transaction-type="RESOURCE_LOCAL">
+  <persistence-unit transaction-type="RESOURCE_LOCAL" name="bankPU">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>bank.domain.Account</class>
     <shared-cache-mode>NONE</shared-cache-mode>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://studmysql01.fhict.local:3306/dbi346355?zeroDateTimeBehavior=convertToNull"/>
@@ -11,19 +12,6 @@
       <property name="eclipselink.ddl-generation" value="create-tables"/>
       <property name="eclipselink.logging.logger" value="DefaultLogger"/>
       <property name="eclipselink.logging.level" value="FINE"/>
-    </properties>
-  </persistence-unit>
-  <persistence-unit name="nl.fontys.se42_bank_jar_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
-    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-    <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://studmysql01.fhict.local:3306/dbi346355?zeroDateTimeBehavior=convertToNull"/>
-      <property name="javax.persistence.jdbc.user" value="dbi346355"/>
-      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-      <property name="javax.persistence.jdbc.password" value="jorrit"/>
-      <property name="javax.persistence.schema-generation.database.action" value="create"/>
-      <property name="eclipselink.logging.logger” value=”DefaultLogger"/>
-      <property name="eclipselink.logging.level” value=”FINE"/>
-
     </properties>
   </persistence-unit>
 </persistence>

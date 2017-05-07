@@ -5,33 +5,29 @@ import java.sql.SQLException;
 import javax.persistence.EntityManager;
 import javax.persistence.metamodel.EntityType;
 
-public class DatabaseCleaner {
+public abstract class DatabaseCleaner {
 
     private static final Class<?>[] ENTITY_TYPES = {
         Account.class
     };
-    private final EntityManager em;
 
-    public DatabaseCleaner(EntityManager entityManager) {
-        em = entityManager;
-    }
-
-    public void clean() throws SQLException {
-        em.getTransaction().begin();
+    public static void clean(EntityManager entityManager) throws SQLException {
+        entityManager.getTransaction().begin();
 
         for (Class<?> entityType : ENTITY_TYPES) {
-            deleteEntities(entityType);
+            deleteEntities(entityType, entityManager);
         }
-        em.getTransaction().commit();
-        em.close();
+        entityManager.getTransaction().commit();
+        entityManager.close();
     }
 
-    private void deleteEntities(Class<?> entityType) {
-        em.createQuery("delete from " + getEntityName(entityType)).executeUpdate();
+    @SuppressWarnings("JPQLValidation")
+    private static void deleteEntities(Class<?> entityType, EntityManager entityManager) {
+        entityManager.createQuery("delete from " + getEntityName(entityType, entityManager)).executeUpdate();
     }
 
-    protected String getEntityName(Class<?> clazz) {
-        EntityType et = em.getMetamodel().entity(clazz);
+    protected static String getEntityName(Class<?> clazz, EntityManager entityManager) {
+        EntityType et = entityManager.getMetamodel().entity(clazz);
         return et.getName();
     }
 }
