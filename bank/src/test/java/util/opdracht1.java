@@ -8,9 +8,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -241,7 +239,7 @@ public class opdracht1 {
         em.getTransaction().begin();
         em.persist(acc1);
         em.getTransaction().commit();
-        //Database bevat nu een account.
+        //Er staat nu een account in de database
 
         // scenario 1        
         Account accF1;
@@ -254,12 +252,9 @@ public class opdracht1 {
         accF1 = em.find(Account.class, acc1.getId());
         em.clear();
         accF2 = em.find(Account.class, acc1.getId());
-        //assertSame(accF1, accF2);
         /**
-         * clear() koppelt alleen alle locale componenten los van em, en cleared
-         * alle persists enzo. Maar dat heeft geen verdere betrekking tot
-         * find(). Wel betekend dit dat aanpassingen aan accF1 niet meer
-         * gesynced worden.
+         * clear() ruimt de locale compnenten van em op.
+         * find(). zoekt gegevens op in de database
          */
     }
 
@@ -270,25 +265,24 @@ public class opdracht1 {
         em.persist(acc1);
         em.getTransaction().commit();
         Long id = acc1.getId();
-        //Database bevat nu een account.
+        //Er staat nu een account in de database
 
         em.remove(acc1);
         assertEquals(id, acc1.getId());
         Account accFound = em.find(Account.class, id);
         assertNull(accFound);
         /**
-         * assertEquals() is heel duidelijk: id is geset naar de waarde van
-         * acc1.getID(). assertNull() komt omdat hij nadat het account uit em
-         * verwijderd is hij dat account niet meer in em kan vinden.
+         * assertEquals() id is geset naar de waarde van acc1.getID(). 
+         * assertNull() het account is al verwijderd daarom is het null
          */
     }
 
     @Test
     public void generationTypeTest() {
         /**
-         * Voor deze test zijn er aanpassingen gemaakt in de Account class,
-         * rebuild en opnieuw getest. SEQUENCE deed alles precies het zelfde,
-         * maar TABLE crashed bij bijna alle tests.
+         * In de account classe hebben we GenerationType veranderden vervolgens ge-rebuild en opnieuw getest. 
+         * SEQUENCE voerde alles precies hetzelfde uit,
+         * Bij TABLE faalde bijna alle tests.
          */
     }
 }
