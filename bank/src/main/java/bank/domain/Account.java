@@ -19,6 +19,8 @@ public class Account implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = GenerationType.SEQUENCE )
+    //@GeneratedValue(strategy = GenerationType.TABLE)
     private Long Id;
     @Column(unique = true)
     private Long accountNr;
