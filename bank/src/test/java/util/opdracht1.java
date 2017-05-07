@@ -231,10 +231,6 @@ public class opdracht1 {
         em.getTransaction().begin();
         em.persist(acc1);
         em.getTransaction().commit();
-<<<<<<< HEAD
-=======
-        //Er staat nu een account in de database
->>>>>>> origin/master
 
         //1        
         Account accF1;
@@ -248,12 +244,8 @@ public class opdracht1 {
         em.clear();
         accF2 = em.find(Account.class, acc1.getId());
         /**
-<<<<<<< HEAD
-         * clear() heeft geen betrekking op find dit betekend dat accounts niet meer gesynced word
-=======
          * clear() ruimt de locale compnenten van em op.
          * find(). zoekt gegevens op in de database
->>>>>>> origin/master
          */
     }
 
@@ -264,10 +256,6 @@ public class opdracht1 {
         em.persist(acc1);
         em.getTransaction().commit();
         Long id = acc1.getId();
-<<<<<<< HEAD
-=======
-        //Er staat nu een account in de database
->>>>>>> origin/master
 
         em.remove(acc1);
         assertEquals(id, acc1.getId());
