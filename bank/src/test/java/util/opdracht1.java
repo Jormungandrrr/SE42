@@ -244,7 +244,7 @@ public class opdracht1 {
         em.clear();
         accF2 = em.find(Account.class, acc1.getId());
         /**
-         * clear() ruimt de locale compnenten van em op.
+         * clear() ruimt de locale compnenten van de entity manager op.
          * find(). zoekt gegevens op in de database
          */
     }
@@ -262,7 +262,7 @@ public class opdracht1 {
         Account accFound = em.find(Account.class, id);
         assertNull(accFound);
         /**
-         * assertEquals() id is geset naar de waarde van acc1.getID(). 
+         * assertEquals() id is geset naar de waarde van acc1.getID()
          * assertNull() het account is al verwijderd daarom is het null
          */
     }
