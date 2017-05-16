@@ -8,14 +8,31 @@ import org.junit.Before;
 import org.junit.Test;
 
 import auction.domain.User;
+import java.sql.SQLException;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import nl.fontys.util.DatabaseCleaner;
+import org.junit.After;
 
 public class RegistrationMgrTest {
 
     private RegistrationMgr registrationMgr;
+    private DatabaseCleaner dbcl;
+    private EntityManagerFactory emf;
+    private EntityManager em;
 
     @Before
     public void setUp() throws Exception {
+        emf = Persistence.createEntityManagerFactory("auction");
+        em = emf.createEntityManager();
+        dbcl = new DatabaseCleaner(em);
         registrationMgr = new RegistrationMgr();
+    }
+    
+    @After
+    public void cleanUp() throws SQLException{
+    dbcl.clean();
     }
 
     @Test

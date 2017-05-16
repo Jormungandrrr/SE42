@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
-  <persistence-unit transaction-type="RESOURCE_LOCAL" name="auction">
+  <persistence-unit name="auction" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>auction.domain.User</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://studmysql01.fhict.local:3306/dbi346355?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.password" value="jorrit"/>

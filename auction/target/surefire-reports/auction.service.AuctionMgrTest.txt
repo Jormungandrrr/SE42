@@ -1,15 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: auction.service.AuctionMgrTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 1.223 sec <<< FAILURE!
-newBid(auction.service.AuctionMgrTest)  Time elapsed: 1.176 sec  <<< ERROR!
-java.lang.IllegalArgumentException: NamedQuery of name: User.findByEmail not found.
-	at org.eclipse.persistence.internal.jpa.QueryImpl.getDatabaseQueryInternal(QueryImpl.java:351)
-	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createNamedQuery(EntityManagerImpl.java:1124)
-	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createNamedQuery(EntityManagerImpl.java:1144)
-	at auction.dao.UserDAOJPAImp.findByEmail(UserDAOJPAImp.java:48)
-	at auction.service.RegistrationMgr.registerUser(RegistrationMgr.java:35)
-	at auction.service.AuctionMgrTest.newBid(AuctionMgrTest.java:72)
+Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 1.579 sec <<< FAILURE!
+newBid(auction.service.AuctionMgrTest)  Time elapsed: 1.425 sec  <<< ERROR!
+java.lang.NullPointerException
+	at auction.service.AuctionMgrTest.newBid(AuctionMgrTest.java:79)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -40,14 +35,9 @@ java.lang.IllegalArgumentException: NamedQuery of name: User.findByEmail not fou
 	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
 	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
-getItem(auction.service.AuctionMgrTest)  Time elapsed: 0.002 sec  <<< ERROR!
-java.lang.IllegalArgumentException: NamedQuery of name: User.findByEmail not found.
-	at org.eclipse.persistence.internal.jpa.QueryImpl.getDatabaseQueryInternal(QueryImpl.java:351)
-	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createNamedQuery(EntityManagerImpl.java:1124)
-	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createNamedQuery(EntityManagerImpl.java:1144)
-	at auction.dao.UserDAOJPAImp.findByEmail(UserDAOJPAImp.java:48)
-	at auction.service.RegistrationMgr.registerUser(RegistrationMgr.java:35)
-	at auction.service.AuctionMgrTest.getItem(AuctionMgrTest.java:35)
+getItem(auction.service.AuctionMgrTest)  Time elapsed: 0.036 sec  <<< ERROR!
+java.lang.NullPointerException
+	at auction.service.AuctionMgrTest.getItem(AuctionMgrTest.java:38)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -78,14 +68,13 @@ java.lang.IllegalArgumentException: NamedQuery of name: User.findByEmail not fou
 	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
 	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
-findItemByDescription(auction.service.AuctionMgrTest)  Time elapsed: 0.004 sec  <<< ERROR!
-java.lang.IllegalArgumentException: NamedQuery of name: User.findByEmail not found.
-	at org.eclipse.persistence.internal.jpa.QueryImpl.getDatabaseQueryInternal(QueryImpl.java:351)
-	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createNamedQuery(EntityManagerImpl.java:1124)
-	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createNamedQuery(EntityManagerImpl.java:1144)
-	at auction.dao.UserDAOJPAImp.findByEmail(UserDAOJPAImp.java:48)
-	at auction.service.RegistrationMgr.registerUser(RegistrationMgr.java:35)
-	at auction.service.AuctionMgrTest.findItemByDescription(AuctionMgrTest.java:50)
+findItemByDescription(auction.service.AuctionMgrTest)  Time elapsed: 0.069 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<2> but was:<0>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:645)
+	at org.junit.Assert.assertEquals(Assert.java:631)
+	at auction.service.AuctionMgrTest.findItemByDescription(AuctionMgrTest.java:60)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

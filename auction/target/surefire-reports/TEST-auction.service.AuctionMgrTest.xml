@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="auction.service.AuctionMgrTest" time="1.223" errors="3" skipped="0">
+<testsuite tests="3" failures="1" name="auction.service.AuctionMgrTest" time="1.585" errors="2" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_112\jre\bin"/>
-    <property name="java.vm.version" value="25.112-b15"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_102\jre\bin"/>
+    <property name="java.vm.version" value="25.102-b14"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
@@ -11,49 +11,49 @@
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
     <property name="user.script" value=""/>
-    <property name="user.country" value="US"/>
+    <property name="user.country" value="NL"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="D:\Github\SE42\auction"/>
-    <property name="java.runtime.version" value="1.8.0_112-b15"/>
+    <property name="user.dir" value="C:\Users\Marc\Documents\NetBeansProjects\auction"/>
+    <property name="java.runtime.version" value="1.8.0_102-b14"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_112\jre\lib\endorsed"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_102\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="C:\Users\Jorrit\AppData\Local\Temp\"/>
+    <property name="java.io.tmpdir" value="C:\Users\Marc\AppData\Local\Temp\"/>
     <property name="line.separator" value="
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans 8.0.2\java\maven-nblib\netbeans-eventspy.jar"/>
-    <property name="classworlds.conf" value="C:\Program Files\NetBeans 8.0.2\java\maven\bin\m2.conf"/>
+    <property name="maven.ext.class.path" value="E:\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="classworlds.conf" value="E:\NetBeans 8.2\java\maven\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_112\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Users\Jorrit\AppData\Local\Programs\Python\Launcher\;C:\Users\Jorrit\AppData\Local\Microsoft\WindowsApps;C:\Users\Jorrit\AppData\Local\atom\bin;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_102\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;E:\OracleDatabase\product\12.1.0\dbhome_2\bin;E:\OracleDatabase\product\12.1.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Users\Marc\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\Programma&apos;s\Brackets\command;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files (x86)\Skype\Phone\;C:\Users\Marc\AppData\Local\atom\bin;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.0"/>
-    <property name="user.home" value="C:\Users\Jorrit"/>
+    <property name="user.home" value="C:\Users\Marc"/>
     <property name="user.timezone" value="Europe/Berlin"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="UTF-8"/>
-    <property name="user.name" value="Jorrit"/>
-    <property name="java.class.path" value="C:\Program Files\NetBeans 8.0.2\java\maven\boot\plexus-classworlds-2.4.jar"/>
+    <property name="user.name" value="Marc"/>
+    <property name="java.class.path" value="E:\NetBeans 8.2\java\maven\boot\plexus-classworlds-2.4.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_112\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.0.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 clean install"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_102\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=E:\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="user.language" value="en"/>
+    <property name="user.language" value="nl"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="1.8.0_112"/>
-    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_112\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
-    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_112\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_112\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_112\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_112\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_112\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_112\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_112\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_112\jre\classes"/>
+    <property name="java.version" value="1.8.0_102"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_102\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_102\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_102\jre\classes"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="C:\Program Files\NetBeans 8.0.2\java\maven"/>
+    <property name="maven.home" value="E:\NetBeans 8.2\java\maven"/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -61,14 +61,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="auction.service.AuctionMgrTest" name="newBid" time="1.176">
-    <error message="NamedQuery of name: User.findByEmail not found." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: NamedQuery of name: User.findByEmail not found.
-	at org.eclipse.persistence.internal.jpa.QueryImpl.getDatabaseQueryInternal(QueryImpl.java:351)
-	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createNamedQuery(EntityManagerImpl.java:1124)
-	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createNamedQuery(EntityManagerImpl.java:1144)
-	at auction.dao.UserDAOJPAImp.findByEmail(UserDAOJPAImp.java:48)
-	at auction.service.RegistrationMgr.registerUser(RegistrationMgr.java:35)
-	at auction.service.AuctionMgrTest.newBid(AuctionMgrTest.java:72)
+  <testcase classname="auction.service.AuctionMgrTest" name="newBid" time="1.425">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at auction.service.AuctionMgrTest.newBid(AuctionMgrTest.java:79)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -100,32 +95,49 @@
 	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </error>
-    <system-out>[EL Info]: 2017-05-15 23:21:31.552--ServerSession(138708980)--Thread(Thread[main,5,main])--EclipseLink, version: Eclipse Persistence Services - 2.5.2.v20140319-9ad6abd
-[EL Fine]: connection: 2017-05-15 23:21:31.872--Thread(Thread[main,5,main])--Detected database platform: org.eclipse.persistence.platform.database.MySQLPlatform
-[EL Config]: connection: 2017-05-15 23:21:31.884--ServerSession(138708980)--Connection(1183701566)--Thread(Thread[main,5,main])--connecting(DatabaseLogin(
+    <system-out>[EL Config]: metadata: 2017-05-16 09:53:50.053--ServerSession(317986356)--Thread(Thread[main,5,main])--The access type for the persistent class [class auction.domain.User] is set to [FIELD].
+[EL Config]: metadata: 2017-05-16 09:53:50.07--ServerSession(317986356)--Thread(Thread[main,5,main])--The alias name for the entity class [class auction.domain.User] is being defaulted to: User.
+[EL Config]: metadata: 2017-05-16 09:53:50.071--ServerSession(317986356)--Thread(Thread[main,5,main])--The table name for entity [class auction.domain.User] is being defaulted to: USER.
+[EL Config]: metadata: 2017-05-16 09:53:50.083--ServerSession(317986356)--Thread(Thread[main,5,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2017-05-16 09:53:50.084--ServerSession(317986356)--Thread(Thread[main,5,main])--The column name for element [email] is being defaulted to: EMAIL.
+[EL Info]: 2017-05-16 09:53:50.567--ServerSession(317986356)--Thread(Thread[main,5,main])--EclipseLink, version: Eclipse Persistence Services - 2.5.2.v20140319-9ad6abd
+[EL Fine]: connection: 2017-05-16 09:53:50.771--Thread(Thread[main,5,main])--Detected database platform: org.eclipse.persistence.platform.database.MySQLPlatform
+[EL Config]: connection: 2017-05-16 09:53:50.78--ServerSession(317986356)--Connection(1463877470)--Thread(Thread[main,5,main])--connecting(DatabaseLogin(
 	platform=&gt;MySQLPlatform
 	user name=&gt; &quot;dbi346355&quot;
 	datasource URL=&gt; &quot;jdbc:mysql://studmysql01.fhict.local:3306/dbi346355?zeroDateTimeBehavior=convertToNull&quot;
 ))
-[EL Config]: connection: 2017-05-15 23:21:31.998--ServerSession(138708980)--Connection(388623360)--Thread(Thread[main,5,main])--Connected: jdbc:mysql://studmysql01.fhict.local:3306/dbi346355?zeroDateTimeBehavior=convertToNull
-	User: dbi346355@192.168.30.54
+[EL Config]: connection: 2017-05-16 09:53:50.829--ServerSession(317986356)--Connection(2078396010)--Thread(Thread[main,5,main])--Connected: jdbc:mysql://studmysql01.fhict.local:3306/dbi346355?zeroDateTimeBehavior=convertToNull
+	User: dbi346355@192.168.30.55
 	Database: MySQL  Version: 5.7.13-log
-	Driver: MySQL Connector Java  Version: mysql-connector-java-5.1.38 ( Revision: fe541c166cec739c74cc727c5da96c1028b4834a )
-[EL Info]: connection: 2017-05-15 23:21:32.003--ServerSession(138708980)--Thread(Thread[main,5,main])--file:/D:/Github/SE42/auction/target/classes/_auction login successful
-[EL Warning]: metamodel: 2017-05-15 23:21:32.022--Thread(Thread[main,5,main])--The collection of metamodel types is empty. Model classes may not have been found during entity search for Java SE and some Java EE container managed persistence units.  Please verify that your entity classes are referenced in persistence.xml using either &lt;class&gt; elements or a global &lt;exclude-unlisted-classes&gt;false&lt;/exclude-unlisted-classes&gt; element
+	Driver: MySQL Connector Java  Version: mysql-connector-java-6.0.6 ( Revision: 3dab84f4d9bede3cdd14d57b99e9e98a02a5b97d )
+[EL Info]: connection: 2017-05-16 09:53:50.943--ServerSession(317986356)--Thread(Thread[main,5,main])--file:/C:/Users/Marc/Documents/NetBeansProjects/auction/target/classes/_auction login successful
+[EL Fine]: sql: 2017-05-16 09:53:50.98--ServerSession(317986356)--Connection(2078396010)--Thread(Thread[main,5,main])--SELECT * FROM SEQUENCE WHERE SEQ_NAME = SEQ_GEN
+[EL Fine]: sql: 2017-05-16 09:53:51.023--ServerSession(317986356)--Connection(2078396010)--Thread(Thread[main,5,main])--SELECT ID, EMAIL FROM USER WHERE (EMAIL = ?)
+	bind =&gt; [ss2@nl]
+[EL Fine]: sql: 2017-05-16 09:53:51.041--ClientSession(1442768482)--Connection(2078396010)--Thread(Thread[main,5,main])--UPDATE SEQUENCE SET SEQ_COUNT = SEQ_COUNT + ? WHERE SEQ_NAME = ?
+	bind =&gt; [50, SEQ_GEN]
+[EL Fine]: sql: 2017-05-16 09:53:51.048--ClientSession(1442768482)--Connection(2078396010)--Thread(Thread[main,5,main])--SELECT SEQ_COUNT FROM SEQUENCE WHERE SEQ_NAME = ?
+	bind =&gt; [SEQ_GEN]
+[EL Fine]: sql: 2017-05-16 09:53:51.077--ClientSession(1442768482)--Connection(2078396010)--Thread(Thread[main,5,main])--INSERT INTO USER (ID, EMAIL) VALUES (?, ?)
+	bind =&gt; [151, ss2@nl]
+[EL Fine]: sql: 2017-05-16 09:53:51.101--ServerSession(317986356)--Connection(2078396010)--Thread(Thread[main,5,main])--SELECT ID, EMAIL FROM USER WHERE (EMAIL = ?)
+	bind =&gt; [bb@nl]
+[EL Fine]: sql: 2017-05-16 09:53:51.114--ClientSession(1442768482)--Connection(2078396010)--Thread(Thread[main,5,main])--INSERT INTO USER (ID, EMAIL) VALUES (?, ?)
+	bind =&gt; [152, bb@nl]
+[EL Fine]: sql: 2017-05-16 09:53:51.132--ServerSession(317986356)--Connection(2078396010)--Thread(Thread[main,5,main])--SELECT ID, EMAIL FROM USER WHERE (EMAIL = ?)
+	bind =&gt; [bb2@nl]
+[EL Fine]: sql: 2017-05-16 09:53:51.144--ClientSession(1442768482)--Connection(2078396010)--Thread(Thread[main,5,main])--INSERT INTO USER (ID, EMAIL) VALUES (?, ?)
+	bind =&gt; [153, bb2@nl]
 </system-out>
-    <system-err>Mon May 15 23:21:31 CEST 2017 WARN: Establishing SSL connection without server&apos;s identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn&apos;t set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to &apos;false&apos;. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-Mon May 15 23:21:31 CEST 2017 WARN: Establishing SSL connection without server&apos;s identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn&apos;t set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to &apos;false&apos;. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+    <system-err>Loading class `com.mysql.jdbc.Driver&apos;. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver&apos;. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+Tue May 16 09:53:50 CEST 2017 WARN: Establishing SSL connection without server&apos;s identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn&apos;t set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to &apos;false&apos;. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+Tue May 16 09:53:50 CEST 2017 WARN: Establishing SSL connection without server&apos;s identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn&apos;t set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to &apos;false&apos;. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
 </system-err>
   </testcase>
-  <testcase classname="auction.service.AuctionMgrTest" name="getItem" time="0.002">
-    <error message="NamedQuery of name: User.findByEmail not found." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: NamedQuery of name: User.findByEmail not found.
-	at org.eclipse.persistence.internal.jpa.QueryImpl.getDatabaseQueryInternal(QueryImpl.java:351)
-	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createNamedQuery(EntityManagerImpl.java:1124)
-	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createNamedQuery(EntityManagerImpl.java:1144)
-	at auction.dao.UserDAOJPAImp.findByEmail(UserDAOJPAImp.java:48)
-	at auction.service.RegistrationMgr.registerUser(RegistrationMgr.java:35)
-	at auction.service.AuctionMgrTest.getItem(AuctionMgrTest.java:35)
+  <testcase classname="auction.service.AuctionMgrTest" name="getItem" time="0.036">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at auction.service.AuctionMgrTest.getItem(AuctionMgrTest.java:38)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -157,15 +169,19 @@ Mon May 15 23:21:31 CEST 2017 WARN: Establishing SSL connection without server&a
 	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </error>
+    <system-out>[EL Fine]: sql: 2017-05-16 09:53:51.182--ServerSession(317986356)--Connection(2078396010)--Thread(Thread[main,5,main])--SELECT ID, EMAIL FROM USER WHERE (EMAIL = ?)
+	bind =&gt; [xx2@nl]
+[EL Fine]: sql: 2017-05-16 09:53:51.194--ClientSession(769195805)--Connection(2078396010)--Thread(Thread[main,5,main])--INSERT INTO USER (ID, EMAIL) VALUES (?, ?)
+	bind =&gt; [154, xx2@nl]
+</system-out>
   </testcase>
-  <testcase classname="auction.service.AuctionMgrTest" name="findItemByDescription" time="0.004">
-    <error message="NamedQuery of name: User.findByEmail not found." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: NamedQuery of name: User.findByEmail not found.
-	at org.eclipse.persistence.internal.jpa.QueryImpl.getDatabaseQueryInternal(QueryImpl.java:351)
-	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createNamedQuery(EntityManagerImpl.java:1124)
-	at org.eclipse.persistence.internal.jpa.EntityManagerImpl.createNamedQuery(EntityManagerImpl.java:1144)
-	at auction.dao.UserDAOJPAImp.findByEmail(UserDAOJPAImp.java:48)
-	at auction.service.RegistrationMgr.registerUser(RegistrationMgr.java:35)
-	at auction.service.AuctionMgrTest.findItemByDescription(AuctionMgrTest.java:50)
+  <testcase classname="auction.service.AuctionMgrTest" name="findItemByDescription" time="0.069">
+    <failure message="expected:&lt;2&gt; but was:&lt;0&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;2&gt; but was:&lt;0&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:645)
+	at org.junit.Assert.assertEquals(Assert.java:631)
+	at auction.service.AuctionMgrTest.findItemByDescription(AuctionMgrTest.java:60)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -196,6 +212,15 @@ Mon May 15 23:21:31 CEST 2017 WARN: Establishing SSL connection without server&a
 	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
 	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
-</error>
+</failure>
+    <system-out>[EL Fine]: sql: 2017-05-16 09:53:51.22--ServerSession(317986356)--Connection(2078396010)--Thread(Thread[main,5,main])--SELECT ID, EMAIL FROM USER WHERE (EMAIL = ?)
+	bind =&gt; [xx3@nl]
+[EL Fine]: sql: 2017-05-16 09:53:51.234--ClientSession(1290795133)--Connection(2078396010)--Thread(Thread[main,5,main])--INSERT INTO USER (ID, EMAIL) VALUES (?, ?)
+	bind =&gt; [155, xx3@nl]
+[EL Fine]: sql: 2017-05-16 09:53:51.253--ServerSession(317986356)--Connection(2078396010)--Thread(Thread[main,5,main])--SELECT ID, EMAIL FROM USER WHERE (EMAIL = ?)
+	bind =&gt; [xx4@nl]
+[EL Fine]: sql: 2017-05-16 09:53:51.266--ClientSession(1290795133)--Connection(2078396010)--Thread(Thread[main,5,main])--INSERT INTO USER (ID, EMAIL) VALUES (?, ?)
+	bind =&gt; [156, xx4@nl]
+</system-out>
   </testcase>
 </testsuite>
