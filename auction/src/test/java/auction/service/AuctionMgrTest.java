@@ -11,19 +11,29 @@ import auction.domain.Bid;
 import auction.domain.Category;
 import auction.domain.Item;
 import auction.domain.User;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
+import nl.fontys.util.DatabaseCleaner;
+import org.junit.After;
 
 public class AuctionMgrTest {
 
     private AuctionMgr auctionMgr;
     private RegistrationMgr registrationMgr;
     private SellerMgr sellerMgr;
+    private DatabaseCleaner databaseCleaner;
 
-    @Before
+      @Before
     public void setUp() throws Exception {
         registrationMgr = new RegistrationMgr();
         auctionMgr = new AuctionMgr();
+        databaseCleaner = new DatabaseCleaner(auctionMgr.getEntitymanager());
         sellerMgr = new SellerMgr();
+    }
+    @After
+    public void cleanUp() throws SQLException {
+        databaseCleaner.clean();
     }
 
     @Test
@@ -53,10 +63,10 @@ public class AuctionMgrTest {
         Item item1 = sellerMgr.offerItem(seller3, cat, omsch);
         Item item2 = sellerMgr.offerItem(seller4, cat, omsch);
 
-        ArrayList<Item> res = (ArrayList<Item>) auctionMgr.findItemByDescription(omsch2);
+        List<Item> res = (List<Item>) auctionMgr.findItemByDescription(omsch2);
         assertEquals(0, res.size());
 
-        res = (ArrayList<Item>) auctionMgr.findItemByDescription(omsch);
+        res = (List<Item>) auctionMgr.findItemByDescription(omsch);
         assertEquals(2, res.size());
 
     }

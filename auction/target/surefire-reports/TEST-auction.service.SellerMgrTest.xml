@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="1" name="auction.service.SellerMgrTest" time="2.883" errors="0" skipped="0">
+<testsuite tests="2" failures="1" name="auction.service.SellerMgrTest" time="2.422" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_102\jre\bin"/>
@@ -62,9 +62,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="auction.service.SellerMgrTest" name="testOfferItem" time="2.679"/>
-  <testcase classname="auction.service.SellerMgrTest" name="testRevokeItem" time="0.157">
-    <failure message="expected:&lt;0&gt; but was:&lt;1&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;0&gt; but was:&lt;1&gt;
+  <testcase classname="auction.service.SellerMgrTest" name="testOfferItem" time="2.157"/>
+  <testcase classname="auction.service.SellerMgrTest" name="testRevokeItem" time="0.218">
+    <failure message="expected:&lt;0&gt; but was:&lt;16&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;0&gt; but was:&lt;16&gt;
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
 	at org.junit.Assert.assertEquals(Assert.java:645)
@@ -101,21 +101,27 @@
 	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
 </failure>
-    <system-out>[EL Fine]: sql: 2017-05-23 11:31:49.848--ServerSession(213193302)--Connection(1322559460)--Thread(Thread[main,5,main])--SELECT ID, EMAIL FROM USER WHERE (EMAIL = ?)
+    <system-out>[EL Fine]: sql: 2017-05-23 12:24:00.918--ServerSession(213193302)--Connection(1322559460)--Thread(Thread[main,5,main])--SELECT ID, EMAIL FROM USER WHERE (EMAIL = ?)
 	bind =&gt; [sel@nl]
-[EL Fine]: sql: 2017-05-23 11:31:49.864--ClientSession(1183912264)--Connection(1322559460)--Thread(Thread[main,5,main])--INSERT INTO USER (ID, EMAIL) VALUES (?, ?)
-	bind =&gt; [752, sel@nl]
-[EL Fine]: sql: 2017-05-23 11:31:49.879--ServerSession(213193302)--Connection(1322559460)--Thread(Thread[main,5,main])--SELECT ID, EMAIL FROM USER WHERE (EMAIL = ?)
+[EL Fine]: sql: 2017-05-23 12:24:00.934--ClientSession(1183912264)--Connection(1322559460)--Thread(Thread[main,5,main])--INSERT INTO USER (ID, EMAIL) VALUES (?, ?)
+	bind =&gt; [1002, sel@nl]
+[EL Fine]: sql: 2017-05-23 12:24:00.965--ServerSession(213193302)--Connection(1322559460)--Thread(Thread[main,5,main])--SELECT ID, EMAIL FROM USER WHERE (EMAIL = ?)
 	bind =&gt; [buy@nl]
-[EL Fine]: sql: 2017-05-23 11:31:49.895--ClientSession(1183912264)--Connection(1322559460)--Thread(Thread[main,5,main])--INSERT INTO USER (ID, EMAIL) VALUES (?, ?)
-	bind =&gt; [753, buy@nl]
-[EL Fine]: sql: 2017-05-23 11:31:49.911--ClientSession(1300497562)--Connection(1322559460)--Thread(Thread[main,5,main])--INSERT INTO ITEM (ITEMDESCRIPTION, DESCRIPTION, HIGHEST_ID, SELLER_ID) VALUES (?, ?, ?, ?)
-	bind =&gt; [omsch, cat1, null, 752]
-[EL Fine]: sql: 2017-05-23 11:31:49.926--ClientSession(1300497562)--Connection(1322559460)--Thread(Thread[main,5,main])--SELECT LAST_INSERT_ID()
-[EL Fine]: sql: 2017-05-23 11:31:49.957--ClientSession(1300497562)--Connection(1322559460)--Thread(Thread[main,5,main])--DELETE FROM ITEM WHERE (ID = ?)
-	bind =&gt; [26]
-[EL Fine]: sql: 2017-05-23 11:31:49.973--ServerSession(213193302)--Connection(1322559460)--Thread(Thread[main,5,main])--SELECT ID, ITEMDESCRIPTION, DESCRIPTION, HIGHEST_ID, SELLER_ID FROM ITEM WHERE (ITEMDESCRIPTION = ?)
+[EL Fine]: sql: 2017-05-23 12:24:00.981--ClientSession(1183912264)--Connection(1322559460)--Thread(Thread[main,5,main])--INSERT INTO USER (ID, EMAIL) VALUES (?, ?)
+	bind =&gt; [1003, buy@nl]
+[EL Fine]: sql: 2017-05-23 12:24:01.012--ClientSession(1300497562)--Connection(1322559460)--Thread(Thread[main,5,main])--INSERT INTO ITEM (ITEMDESCRIPTION, DESCRIPTION, HIGHEST_ID, SELLER_ID) VALUES (?, ?, ?, ?)
+	bind =&gt; [omsch, cat1, null, 1002]
+[EL Fine]: sql: 2017-05-23 12:24:01.028--ClientSession(1300497562)--Connection(1322559460)--Thread(Thread[main,5,main])--SELECT LAST_INSERT_ID()
+[EL Fine]: sql: 2017-05-23 12:24:01.059--ClientSession(1300497562)--Connection(1322559460)--Thread(Thread[main,5,main])--DELETE FROM ITEM WHERE (ID = ?)
+	bind =&gt; [52]
+[EL Fine]: sql: 2017-05-23 12:24:01.075--ServerSession(213193302)--Connection(1322559460)--Thread(Thread[main,5,main])--SELECT ID, ITEMDESCRIPTION, DESCRIPTION, HIGHEST_ID, SELLER_ID FROM ITEM WHERE (ITEMDESCRIPTION = ?)
 	bind =&gt; [omsch]
+[EL Fine]: sql: 2017-05-23 12:24:01.09--ServerSession(213193302)--Connection(1322559460)--Thread(Thread[main,5,main])--SELECT ID, EMAIL FROM USER WHERE (ID = ?)
+	bind =&gt; [954]
+[EL Fine]: sql: 2017-05-23 12:24:01.09--ServerSession(213193302)--Connection(1322559460)--Thread(Thread[main,5,main])--SELECT ID, EMAIL FROM USER WHERE (ID = ?)
+	bind =&gt; [955]
+[EL Fine]: sql: 2017-05-23 12:24:01.106--ServerSession(213193302)--Connection(1322559460)--Thread(Thread[main,5,main])--SELECT ID, EMAIL FROM USER WHERE (ID = ?)
+	bind =&gt; [956]
 </system-out>
   </testcase>
 </testsuite>

@@ -1,9 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: auction.service.SellerMgrTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.883 sec <<< FAILURE!
-testRevokeItem(auction.service.SellerMgrTest)  Time elapsed: 0.157 sec  <<< FAILURE!
-java.lang.AssertionError: expected:<0> but was:<1>
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.437 sec <<< FAILURE!
+testRevokeItem(auction.service.SellerMgrTest)  Time elapsed: 0.218 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<0> but was:<16>
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
 	at org.junit.Assert.assertEquals(Assert.java:645)
