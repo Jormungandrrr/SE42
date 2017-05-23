@@ -12,18 +12,29 @@ import org.junit.Test;
 import auction.domain.Category;
 import auction.domain.Item;
 import auction.domain.User;
+import java.sql.SQLException;
+import nl.fontys.util.DatabaseCleaner;
+import org.junit.After;
 
 public class SellerMgrTest {
 
     private AuctionMgr auctionMgr;
     private RegistrationMgr registrationMgr;
     private SellerMgr sellerMgr;
+    private DatabaseCleaner databaseCleaner;
+
 
     @Before
     public void setUp() throws Exception {
         registrationMgr = new RegistrationMgr();
         auctionMgr = new AuctionMgr();
         sellerMgr = new SellerMgr();
+        databaseCleaner = new DatabaseCleaner(auctionMgr.getEntitymanager());
+    }
+    
+    @After
+    public void cleanUp() throws SQLException {
+        databaseCleaner.clean();
     }
 
     /**
