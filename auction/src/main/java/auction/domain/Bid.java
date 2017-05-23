@@ -3,14 +3,30 @@ package auction.domain;
 import nl.fontys.util.FontysTime;
 import nl.fontys.util.Money;
 
-public class Bid {
+import javax.persistence.*;
 
+@Entity
+public class Bid {
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    @Column
     private FontysTime time;
+
+    @OneToOne
     private User buyer;
+
+
     private Money amount;
 
+    public Bid(){
+        //Empty for JPA
+    }
+
     public Bid(User buyer, Money amount) {
-        //TODO
+        this.buyer = buyer;
+        this.amount = amount;
     }
 
     public FontysTime getTime() {
@@ -25,3 +41,5 @@ public class Bid {
         return amount;
     }
 }
+
+

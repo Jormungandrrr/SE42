@@ -1,0 +1,7 @@
+#surefire
+#Tue May 23 11:29:24 CEST 2017
+maven.ext.class.path=C\:\\Program Files\\NetBeans 8.2\\java\\maven-nblib\\netbeans-eventspy.jar
+user.dir=C\:\\Users\\Jorrit\\Documents\\GitHub\\SE42\\auction
+file.encoding=UTF-8
+localRepository=C\:\\Users\\Jorrit\\.m2\\repository
+basedir=C\:\\Users\\Jorrit\\Documents\\GitHub\\SE42\\auction

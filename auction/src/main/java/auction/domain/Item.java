@@ -2,18 +2,40 @@ package auction.domain;
 
 import nl.fontys.util.Money;
 
+import javax.persistence.*;
+
+    @Entity
+    @NamedQueries({
+            @NamedQuery(name ="Item.count",query="select count(i) from Item as i" ),
+            @NamedQuery(name ="Item.findByDescription", query = "select i from Item as i where i.itemDescription = :description"),
+            @NamedQuery(name ="Item.findById", query = "select i from Item as i where i.id = :id")
+
+    })
 public class Item implements Comparable {
 
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @OneToOne
     private User seller;
+
+    @Embedded
     private Category category;
-    private String description;
+
+    @Column
+    private String itemDescription;
+
+    @OneToOne
     private Bid highest;
 
-    public Item(User seller, Category category, String description) {
+    public Item(){
+        //Empty constructor for JPA
+    }
+
+    public Item(User seller, Category category, String itemDescription) {
         this.seller = seller;
         this.category = category;
-        this.description = description;
+        this.itemDescription = itemDescription;
     }
 
     public Long getId() {
@@ -29,7 +51,7 @@ public class Item implements Comparable {
     }
 
     public String getDescription() {
-        return description;
+        return itemDescription;
     }
 
     public Bid getHighestBid() {

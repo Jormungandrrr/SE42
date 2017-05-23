@@ -3,6 +3,8 @@
   <persistence-unit name="auction" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>auction.domain.User</class>
+    <class>auction.domain.Bid</class>
+    <class>auction.domain.Item</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://studmysql01.fhict.local:3306/dbi346355?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.password" value="jorrit"/>

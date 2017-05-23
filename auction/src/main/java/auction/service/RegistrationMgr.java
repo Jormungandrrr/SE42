@@ -4,6 +4,7 @@ import java.util.*;
 
 import auction.dao.UserDAOJPAImp;
 import auction.domain.User;
+import auction.dao.UserDAOCollectionImpl;
 import auction.dao.UserDAO;
 
 import javax.persistence.EntityManager;
@@ -34,7 +35,7 @@ public class RegistrationMgr {
         }
         User user = userDAO.findByEmail(email);
         if (user != null) {
-            return user;
+             return user;
         }
         user = new User(email);
         userDAO.create(user);
