@@ -14,6 +14,7 @@ public class SellerMgr {
     private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("auction");
     private ItemDAOJPAImpl itemDAO;
 
+
     public SellerMgr() {
         EntityManager em = emf.createEntityManager();
         itemDAO = new ItemDAOJPAImpl(em);
@@ -29,6 +30,7 @@ public class SellerMgr {
     public Item offerItem(User seller, Category cat, String description) {
         Item item = new Item(seller,cat,description);
         itemDAO.create(item);
+        seller.addOfferedItems(item);
         return item;
     }
     

@@ -42,7 +42,7 @@ public class ItemsFromSellerTest {
         User user1 = registrationMgr.registerUser(email);
         assertEquals(0, user1.numberOfOfferedItems());
 
-        Category cat = new Category("categorie");
+        Category cat = new Category("Dance");
         Item item1 = sellerMgr.offerItem(user1, cat, omsch1);
 
        
@@ -88,7 +88,7 @@ public class ItemsFromSellerTest {
         String omsch1 = "omschrijving1";
         String omsch2 = "omschrijving2";
 
-        Category cat = new Category("cat2");
+        Category cat = new Category("Dance2");
 
         User user10 = registrationMgr.registerUser(email);
         Item item10 = sellerMgr.offerItem(user10, cat, omsch1);
