@@ -14,9 +14,13 @@ public class Bid {
     @Column
     private FontysTime time;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     private User buyer;
 
+    @ManyToOne(cascade = CascadeType.PERSIST)
+
+    @JoinColumn(nullable = false)
+    private Item item;
 
     private Money amount;
 
@@ -40,6 +44,6 @@ public class Bid {
     public Money getAmount() {
         return amount;
     }
+
+    public Item getItem(){ return item;}
 }
-
-

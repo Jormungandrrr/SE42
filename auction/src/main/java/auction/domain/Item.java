@@ -1,5 +1,6 @@
 package auction.domain;
 
+import java.util.List;
 import nl.fontys.util.Money;
 
 import javax.persistence.*;
@@ -27,6 +28,9 @@ public class Item implements Comparable {
     @OneToOne
     private Bid highest;
 
+    @OneToMany(mappedBy="item", cascade = CascadeType.PERSIST)
+    private List<Bid> bids;
+        
     public Item(){
         //Empty constructor for JPA
     }
@@ -56,6 +60,10 @@ public class Item implements Comparable {
     public Bid getHighestBid() {
         return highest;
     }
+    
+    public List<Bid> getBids() {
+        return this.bids;
+    }
 
     public Bid newBid(User buyer, Money amount) {
         if (highest != null && highest.getAmount().compareTo(amount) >= 0) {
@@ -71,12 +79,28 @@ public class Item implements Comparable {
     }
 
     public boolean equals(Object o) {
-        //TODO
-        return false;
+        if(this.getClass() != o.getClass()){
+            return false;
+        }
+        Item itemToCompare = (Item) o;
+
+        if(this.id != itemToCompare.id){
+            return false;
+        }
+
+        if(this.getSeller() != itemToCompare.getSeller()){
+            return false;
+        }
+
+        if(this.getDescription() != itemToCompare.getDescription()){
+            return false;
+        }
+
+        return true;
     }
 
     public int hashCode() {
         //TODO
-        return 0;
+        return id.intValue();
     }
 }
