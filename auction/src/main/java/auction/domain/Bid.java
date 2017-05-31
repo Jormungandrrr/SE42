@@ -14,7 +14,7 @@ public class Bid {
     @Column
     private FontysTime time;
 
-    @OneToOne
+    @ManyToOne
     private User buyer;
 
 

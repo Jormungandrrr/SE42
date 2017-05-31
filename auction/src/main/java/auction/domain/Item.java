@@ -9,14 +9,13 @@ import javax.persistence.*;
             @NamedQuery(name ="Item.count",query="select count(i) from Item as i" ),
             @NamedQuery(name ="Item.findByDescription", query = "select i from Item as i where i.itemDescription = :description"),
             @NamedQuery(name ="Item.findById", query = "select i from Item as i where i.id = :id")
-
     })
 public class Item implements Comparable {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
+    @ManyToOne
     private User seller;
 
     @Embedded
