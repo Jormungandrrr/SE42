@@ -46,4 +46,8 @@ public class Bid {
     }
 
     public Item getItem(){ return item;}
+    
+    public void setItem(Item i){
+        this.item = i;
+    }
 }
